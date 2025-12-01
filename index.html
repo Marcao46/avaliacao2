@@ -4,17 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividades Avaliativas 2-ProvaFinal</title>
+    <style>
+        body {
+            background: rgb(168, 144, 144);
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .button {
+            all: unset; /* Remove o estilo padrão do navegador */
+            background: rgb(71, 191, 212);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+        }
+
+        h1{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     
-    <h1>Segue abaixo os links para redirecionar as Atividades realizadas</h1>
-     <ul>
-        <li>
-            <a href="./Calculadora/calculadora.html"> Calculadora Simples </a>
-        </li>
-     </ul>
+    <h1>Segue abaixo as Atividades realizadas</h1>
+ 
+    <button class="button" onclick="calculadora()">Calculadora Simples</button>
 
-
+    <script>
+        function calculadora() {
+            window.location.href = "./calculadora/calculadora.html";
+        }
+    </script>
 
 </body>
 </html>
