@@ -4,47 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividades Avaliativas 2-ProvaFinal</title>
+
     <style>
-    html, body {
-        height: 100%;       /* Garante altura total */
-        margin: 0;
-        padding: 0;
-    }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-        background-image: url("ims/fundo2.jpg");
-        background-size: cover;      /* Enquadra a imagem sem distorcer */
-        background-position: center; /* Centraliza a imagem */
-        background-repeat: no-repeat;/* Não repete */
-        background-attachment: fixed;/* (opcional) efeito bonito tipo parallax */
+        body {
+            background-image: url("ims/fundo2.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+        }
 
-        padding: 20px;
-        font-family: Arial, sans-serif;
-    }
+        .container {
+            height: 100%;
+            display: flex;
+            justify-content: center;   /* Centro horizontal */
+            align-items: center;       /* Centro vertical */
+            flex-direction: column;
+        }
 
-    .button {
-        all: unset;
-        background: rgb(71, 191, 212);
-        color: white;
-        padding: 10px 20px;
-        border-radius: 6px;
-        font-size: 18px;
-        cursor: pointer;
-        display: inline-block;
-        text-align: center;
-    }
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 4px black;
+            margin-bottom: 20px;
+            top: 50px;
+        }
 
-    h1 {
-        text-align: center;
-    }
-</style>
-
+        .button {
+            all: unset;
+            background: rgb(49, 190, 96);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-    
-    <h1>Segue abaixo as Atividades realizadas</h1>
- 
-    <button class="button" onclick="calculadora()">Calculadora Simples</button>
+
+    <div class="container">
+        <h1>Segue abaixo as Atividades realizadas</h1>
+
+        <button class="button" onclick="calculadora()">Calculadora Simples</button>
+    </div>
 
     <script>
         function calculadora() {
