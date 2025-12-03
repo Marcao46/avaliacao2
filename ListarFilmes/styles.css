@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #282828;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #e50914; /* Cor de destaque */
+}
+
+/* Formulário de Busca */
+#search-form {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#search-input {
+    padding: 10px 15px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+#search-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e50914;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#search-form button:hover {
+    background-color: #ff202b;
+}
+
+/* Container de Resultados */
+#results-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Cartão de Filme Individual */
+.movie-card {
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    width: 250px;
+    padding-bottom: 15px;
+    text-align: left;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.movie-card h3 {
+    padding: 10px 15px 0;
+    margin: 0;
+    font-size: 1.2em;
+    height: 50px; /* Altura fixa para alinhar os títulos */
+    overflow: hidden;
+}
+
+.movie-card p {
+    padding: 0 15px;
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.movie-card p strong {
+    color: #f0f0f0;
+}
+
+.placeholder-text {
+    font-size: 1.1em;
+    color: #aaa;
+    margin-top: 50px;
+}

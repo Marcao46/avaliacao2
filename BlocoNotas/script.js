@@ -1,17 +1,18 @@
 let notas = [];
         let notaAtual = null;
 
+        // 🔹 Carregar notas do LocalStorage
+        function carregarNotas() {
+            const dados = localStorage.getItem("notas");
+            notas = dados ? JSON.parse(dados) : [];
+        }
         // 🔹 Carrega notas ao iniciar
         window.onload = function() {
             carregarNotas();
             listarNotas();
         };
 
-        // 🔹 Carregar notas do LocalStorage
-        function carregarNotas() {
-            const dados = localStorage.getItem("notas");
-            notas = dados ? JSON.parse(dados) : [];
-        }
+        
 
         // 🔹 Salvar notas no LocalStorage
         function salvarLocal() {

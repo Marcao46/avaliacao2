@@ -4,82 +4,130 @@
 <head>
     <meta charset="UTF-8">
     <meta-name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividades Avaliativas 2 - Prova Final</title>
+        <title>Atividades Avaliativas 2 - Prova Final</title>
 
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
+        <style>
+            html,
+            body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
 
-        body {
-            background-image: url("ims/fundo2.jpg");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: Arial, sans-serif;
-        }
+            body {
+                background-image: url("ims/fundo2.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                font-family: Arial, sans-serif;
+            }
 
-        .container {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
+            .container {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
 
-        h1 {
-            color: white;
-            text-shadow: 2px 2px 4px black;
-            margin-bottom: 20px;
-        }
+            h1 {
+                color: white;
+                text-shadow: 2px 2px 4px black;
+                margin-bottom: 20px;
+            }
 
-        .button {
-            border: none;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 8px;
-            font-size: 20px;
-            cursor: pointer;
-            margin: 10px;
-        }
+            .button {
+                border: none;
+                color: white;
+                padding: 12px 30px;
+                border-radius: 8px;
+                font-size: 20px;
+                cursor: pointer;
+                margin: 10px;
+            }
 
-        /* 🎯 ANIMAÇÕES DOS BOTÕES */
-        .button1 {
-            background-color: aqua;
-            animation: pulsar 2s infinite ease-in-out;
-        }
+            /* 🎯 ANIMAÇÕES DOS BOTÕES */
+            .button1 {
+                background-color: aqua;
+                animation: pulsar 2s infinite ease-in-out;
+            }
 
-        .button2 {
-            background-color: aquamarine;
-            animation: brilho 2s infinite alternate;
-        }
+            .button2 {
+                background-color: aquamarine;
+                animation: brilho 2s infinite alternate;
+            }
 
-        .button3 {
-            background-color: blanchedalmond;
-            animation: subir 1.8s infinite ease-in-out;
-        }
+            .button3 {
+                background-color: blanchedalmond;
+                animation: subir 1.8s infinite ease-in-out;
+            }
 
-        /* 🔥 KEYFRAMES */
-        @keyframes pulsar {
-            0%   { transform: scale(1); }
-            50%  { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
+            .button4 {
+                background-color: rgb(151, 92, 2);
+                animation: wiggle 1s infinite ease-in-out;
+            }
+            
 
-        @keyframes brilho {
-            0%   { box-shadow: 0 0 0px white; }
-            100% { box-shadow: 0 0 20px white; }
-        }
 
-        @keyframes subir {
-            0%   { transform: translateY(0); }
-            50%  { transform: translateY(-6px); }
-            100% { transform: translateY(0); }
-        }
-    </style>
+            @keyframes pulsar {
+                0% {
+                    transform: scale(1);
+                }
+
+                50% {
+                    transform: scale(1.05);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
+            }
+
+            @keyframes brilho {
+                0% {
+                    box-shadow: 0 0 0px white;
+                }
+
+                100% {
+                    box-shadow: 0 0 20px white;
+                }
+            }
+
+            @keyframes subir {
+                0% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(-6px);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes wiggle {
+
+                0%,
+                100% {
+                    transform: rotate(0deg);
+                }
+
+                25% {
+                    transform: rotate(2deg);
+                }
+
+                50% {
+                    transform: rotate(-2deg);
+                }
+
+                75% {
+                    transform: rotate(2deg);
+                }
+            }
+        </style>
 </head>
 
 <body>
@@ -90,6 +138,7 @@
         <button class="button button1" onclick="calculadora()">Calculadora Simples</button>
         <button class="button button2" onclick="cronometro()">Cronômetro</button>
         <button class="button button3" onclick="blocoNotas()">Bloco de Notas</button>
+        <button class="button button4" onclick="buscarFilmes()">Buscador de Filmes</button>
     </div>
 
     <script>
@@ -103,6 +152,9 @@
 
         function blocoNotas() {
             window.location.href = "./BlocoNotas/bloco.html";
+        }
+        function buscarFilmes() {
+            window.location.href = "./ListarFilmes/filmes.html";
         }
     </script>
 
