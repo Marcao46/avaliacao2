@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco de Notas JS</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+    <!-- LISTA LATERAL -->
+    <div id="listaNotas">
+        <h2>Minhas Notas</h2>
+        <div id="notasContainer"></div>
+        <p id="semNotas"></p>
+    </div>
+
+    <!-- ÁREA PRINCIPAL -->
+    <div id="conteudo">
+        <h2 id="labelTitulo">Nova Nota</h2>
+
+        <textarea id="textoNota" placeholder="Digite sua nota aqui..."></textarea>
+
+        <br>
+        <button onclick="novaNota()">Nova</button>
+        <button onclick="salvarNota()">Salvar</button>
+        <button onclick="excluirNota()">Excluir</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividades Avaliativas 2-ProvaFinal</title>
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades Avaliativas 2 - Prova Final</title>
 
     <style>
         html, body {
@@ -24,8 +25,8 @@
         .container {
             height: 100%;
             display: flex;
-            justify-content: center;   /* Centro horizontal */
-            align-items: center;       /* Centro vertical */
+            justify-content: center;
+            align-items: center;
             flex-direction: column;
         }
 
@@ -33,17 +34,50 @@
             color: white;
             text-shadow: 2px 2px 4px black;
             margin-bottom: 20px;
-            top: 50px;
         }
 
         .button {
-            all: unset;
-            background: rgb(49, 190, 96);
+            border: none;
             color: white;
             padding: 12px 30px;
             border-radius: 8px;
             font-size: 20px;
             cursor: pointer;
+            margin: 10px;
+        }
+
+        /* 🎯 ANIMAÇÕES DOS BOTÕES */
+        .button1 {
+            background-color: aqua;
+            animation: pulsar 2s infinite ease-in-out;
+        }
+
+        .button2 {
+            background-color: aquamarine;
+            animation: brilho 2s infinite alternate;
+        }
+
+        .button3 {
+            background-color: blanchedalmond;
+            animation: subir 1.8s infinite ease-in-out;
+        }
+
+        /* 🔥 KEYFRAMES */
+        @keyframes pulsar {
+            0%   { transform: scale(1); }
+            50%  { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes brilho {
+            0%   { box-shadow: 0 0 0px white; }
+            100% { box-shadow: 0 0 20px white; }
+        }
+
+        @keyframes subir {
+            0%   { transform: translateY(0); }
+            50%  { transform: translateY(-6px); }
+            100% { transform: translateY(0); }
         }
     </style>
 </head>
@@ -53,18 +87,25 @@
     <div class="container">
         <h1>Segue abaixo as Atividades realizadas</h1>
 
-        <button class="button" onclick="calculadora()">Calculadora Simples</button>
-        <button class="button" onclick="cronometro()">Cronometro</button>
-    </div> ""
+        <button class="button button1" onclick="calculadora()">Calculadora Simples</button>
+        <button class="button button2" onclick="cronometro()">Cronômetro</button>
+        <button class="button button3" onclick="blocoNotas()">Bloco de Notas</button>
+    </div>
 
     <script>
         function calculadora() {
             window.location.href = "./calculadora/calculadora.html";
         }
-        function cronometro(){
-            window.location.href="./Cronometro/cronometro.html";
+
+        function cronometro() {
+            window.location.href = "./Cronometro/cronometro.html";
+        }
+
+        function blocoNotas() {
+            window.location.href = "./BlocoNotas/bloco.html";
         }
     </script>
 
 </body>
+
 </html>
