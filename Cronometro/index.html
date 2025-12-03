@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro com Pausas</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+
+    <h1>Cronômetro</h1>
+
+    <div id="display">00:00:00.000</div>
+
+    <div class="botoes">
+        <button class="start" onclick="iniciar()">Iniciar</button>
+        <button class="pause" onclick="pausar()">Pausar</button>
+        <button class="stop" onclick="parar()">Parar</button>
+    </div>
+
+    <div id="pausas">
+        <h3>Pausas Registradas</h3>
+        <div id="listaPausas"></div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
