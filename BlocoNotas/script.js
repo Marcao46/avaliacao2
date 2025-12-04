@@ -1,12 +1,12 @@
 let notas = [];
         let notaAtual = null;
 
-        // 🔹 Carregar notas do LocalStorage
+        // Carregar notas do LocalStorage
         function carregarNotas() {
             const dados = localStorage.getItem("notas");
             notas = dados ? JSON.parse(dados) : [];
         }
-        // 🔹 Carrega notas ao iniciar
+        // Carrega notas ao iniciar
         window.onload = function() {
             carregarNotas();
             listarNotas();
@@ -14,12 +14,12 @@ let notas = [];
 
         
 
-        // 🔹 Salvar notas no LocalStorage
+        // Salvar notas no LocalStorage
         function salvarLocal() {
             localStorage.setItem("notas", JSON.stringify(notas));
         }
 
-        // 🔹 Mostrar lista lateral
+        // Mostrar lista lateral
         function listarNotas() {
             const container = document.getElementById("notasContainer");
             const semNotas = document.getElementById("semNotas");
@@ -42,14 +42,14 @@ let notas = [];
             });
         }
 
-        // 🔹 Criar nova nota
+        // Criar nova nota
         function novaNota() {
             notaAtual = null;
             document.getElementById("textoNota").value = "";
             document.getElementById("labelTitulo").innerText = "Nova Nota";
         }
 
-        // 🔹 Salvar nota (nova ou editando)
+        // Salvar nota (nova ou editando)
         function salvarNota() {
             const texto = document.getElementById("textoNota").value;
 
@@ -69,14 +69,14 @@ let notas = [];
             alert("Nota salva com sucesso!");
         }
 
-        // 🔹 Abrir nota clicada na lista
+        // Abrir nota clicada na lista
         function abrirNota(index) {
             notaAtual = index;
             document.getElementById("textoNota").value = notas[index].texto;
             document.getElementById("labelTitulo").innerText = "Editando Nota";
         }
 
-        // 🔹 Excluir nota com confirmação
+        // Excluir nota com confirmação
         function excluirNota() {
             if (notaAtual === null) {
                 alert("Nenhuma nota selecionada!");
